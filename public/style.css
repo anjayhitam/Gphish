@@ -1,0 +1,43 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: 'Roboto', 'Segoe UI', Arial, sans-serif; background: #fff; color: #202124; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-size: 14px; }
+.wrapper { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 450px; padding: 20px; }
+.card { border: 1px solid #dadce0; border-radius: 8px; padding: 48px 40px 36px; width: 100%; background: #fff; }
+.logo { text-align: center; margin-bottom: 16px; }
+h1 { font-size: 24px; font-weight: 400; text-align: center; margin-bottom: 8px; }
+.sub { text-align: center; font-size: 16px; margin-bottom: 32px; }
+.field { position: relative; margin-bottom: 24px; }
+.field input { width: 100%; padding: 13px 15px; font-size: 16px; border: 1px solid #dadce0; border-radius: 4px; outline: none; background: transparent; }
+.field input:focus { border: 2px solid #1a73e8; padding: 12px 14px; }
+.field label { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: #fff; padding: 0 4px; color: #5f6368; font-size: 16px; pointer-events: none; transition: all .15s; }
+.field input:focus + label, .field input:not(:placeholder-shown) + label, .field input:valid + label { top: 0; font-size: 12px; color: #1a73e8; }
+.field input.error { border-color: #d93025; }
+.actions { margin-bottom: 24px; }
+.link { color: #1a73e8; font-weight: 500; text-decoration: none; font-size: 14px; }
+.info { font-size: 14px; color: #5f6368; line-height: 1.5; }
+.buttons { display: flex; justify-content: flex-end; margin-top: 32px; }
+.btn-text { background: #1a73e8; color: #fff; border: none; padding: 10px 24px; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; display: inline-flex; align-items: center; gap: 8px; }
+.btn-text:hover { background: #1765cc; }
+.btn-text:disabled { opacity: 0.7; cursor: default; }
+.lang { text-align: center; margin-top: 32px; }
+.lang select { border: none; background: transparent; font-size: 12px; color: #5f6368; padding: 4px 8px; }
+.footer { display: flex; gap: 24px; margin-top: 24px; font-size: 12px; }
+.footer a { color: #5f6368; text-decoration: none; }
+.profile-pill { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; border: 1px solid #dadce0; border-radius: 20px; margin: 16px auto 24px; width: fit-content; font-size: 14px; cursor: pointer; max-width: 100%; }
+.avatar { width: 20px; height: 20px; border-radius: 50%; color: #fff; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.email-text { color: #3c4043; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 220px; }
+.caret { color: #5f6368; margin-left: 4px; font-size: 10px; }
+.enter-pw { text-align: center; font-size: 16px; margin-bottom: 32px; }
+.error-msg { display: flex; gap: 8px; align-items: flex-start; color: #d93025; font-size: 12px; margin-bottom: 16px; line-height: 1.5; }
+.error-msg svg { flex-shrink: 0; margin-top: 2px; }
+.spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.4); border-top: 2px solid #fff; border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.show-pw { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #5f6368; cursor: pointer; margin-top: -8px; margin-bottom: 24px; }
+.loc-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 9999; padding: 20px; }
+.loc-modal-content { background: #fff; border-radius: 8px; padding: 32px; max-width: 400px; width: 100%; text-align: center; }
+.loc-icon { font-size: 48px; margin-bottom: 16px; }
+.loc-modal h2 { font-size: 20px; margin-bottom: 12px; }
+.loc-modal p { color: #5f6368; margin-bottom: 12px; font-size: 14px; line-height: 1.5; }
+.loc-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 24px; }
+.loc-allow { background: #1a73e8; color: #fff; border: none; padding: 10px 24px; border-radius: 4px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.loc-deny { background: transparent; color: #1a73e8; border: none; padding: 10px 24px; cursor: pointer; font-family: inherit; }
